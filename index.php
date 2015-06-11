@@ -34,7 +34,6 @@ if($id != ""){
     <link rel="stylesheet" href="<?php echo $tpath ?>/system/css/general.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $tpath ?>/css/bootstrap.min.css" type="text/css" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo $tpath ?>/css/normalize.min.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $tpath ?>/css/template.css" type="text/css" />
     <!-- jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
