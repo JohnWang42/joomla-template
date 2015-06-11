@@ -1,0 +1,11 @@
+/*  Mobile media query */
+@media (max-width: 768px) {
+}
+
+/* Tablet media query */
+@media (max-width: 1024px) and (min-width: 769px) {
+}
+
+/* Print media query */
+@media print {
+}
