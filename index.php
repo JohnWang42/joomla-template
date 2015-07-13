@@ -29,6 +29,8 @@ if($id != ""){
   <head>
     <jdoc:include type="head" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Media Query fix for older browsers -->
+    <script type="text/javascript" src="<?php echo $tpath ?>/js/respond.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo $tpath ?>/system/css/system.css" type="text/css" />
     <link rel="stylesheet" href="<?php echo $tpath ?>/system/css/general.css" type="text/css" />
