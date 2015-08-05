@@ -1,3 +1,9 @@
+body {
+	/* Font weight fix for macs */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 /*  Mobile media query */
 @media (max-width: 768px) {
 }
