@@ -36,7 +36,8 @@ if($id != ""){
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo $tpath ?>/css/template.css" type="text/css" />
     <!-- jQuery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script type="text/javascript" src="<?php echo $tpath ?>/js/jquery-1.11.3.min.js">\x3C/script>')</script>
   </head>
 
   <!-- Set page class -->

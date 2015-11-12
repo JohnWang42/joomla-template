@@ -1,7 +1,7 @@
 Allebach Communications starter template for Joomla 3.x
 
 ### Included Libraries ###
-* [jQuery 1.11.1](https://jquery.com/)
+* [jQuery 1.11.3](https://jquery.com/)
 
 * [Bootstrap 3](http://getbootstrap.com/): Custom Version - See bootstrap.min.css comments for config file. Includes following components:
 	* Print media styles
@@ -32,3 +32,8 @@ The index has several global variables to aid in identification of content.
 
 ### Automated JS and CSS minification ###
 Included Gruntfile will minify all js and css files in their respective folders. To use it, make sure you have [Node](https://nodejs.org/) installed.
+
+### Responsive Image Loading ###
+`<img>` tags that are desktop or mobile specific can be loaded responsively using the `data-src` attribute in place of the `src` attribute. This helps to ease the total size of the page load.
+
+Use in conjunction with [gzip compression](https://bitbucket.org/snippets/allebachcommunications/5E7Ad/joomla-htaccess-with-gzip-compression) for faster page load times.
