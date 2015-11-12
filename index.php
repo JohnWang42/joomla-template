@@ -12,7 +12,7 @@ $pageclass = $params->get('pageclass_sfx');
 $tpath = $this->baseurl.'/templates/'.$this->template;
 
 //Get category name if it exists
-$db = &JFactory::getDBO();
+$db = JFactory::getDBO();
 $id = JRequest::getString('id');
 if($id != ""){
   $db->setQuery('SELECT #__categories.title FROM #__content, #__categories WHERE #__content.catid = #__categories.id AND #__content.id = '.$id);
