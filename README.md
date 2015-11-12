@@ -30,8 +30,16 @@ The index has several global variables to aid in identification of content.
 	//Active menu item's alias
 	$active->alias
 
-### Automated JS and CSS minification ###
-Included Gruntfile will minify all js and css files in their respective folders. To use it, make sure you have [Node](https://nodejs.org/) installed.
+### Grunt Automation ###
+Included Gruntfile will minify all js and css files in their respective folders and upload them to the specified server. To use it, make sure you have [Node](https://nodejs.org/) installed.
+
+Please make sure to change the file directories in **"Gruntfile.js"**. Also input your FTP credentials in **".ftppass"**.
+
+Two tasks are availible for use:
+
+* `grunt` minifies all css and js files and uploads them. Images and files inside `/vendor` folders are ignored.
+
+* `grunt init` will upload everything.
 
 ### Responsive Image Loading ###
 `<img>` tags that are desktop or mobile specific can be loaded responsively using the `data-src` attribute in place of the `src` attribute. This helps to ease the total size of the page load.

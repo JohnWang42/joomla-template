@@ -30,14 +30,14 @@ if($id != ""){
     <jdoc:include type="head" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Media Query fix for older browsers -->
-    <script type="text/javascript" src="<?php echo $tpath ?>/js/respond.min.js"></script>
+    <script type="text/javascript" src="<?php echo $tpath ?>/js/vendor/respond.min.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo $tpath ?>/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $tpath ?>/css/vendor/bootstrap.min.css" type="text/css" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo $tpath ?>/css/template.css" type="text/css" />
     <!-- jQuery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script type="text/javascript" src="<?php echo $tpath ?>/js/jquery-1.11.3.min.js">\x3C/script>')</script>
+    <script>window.jQuery || document.write('<script type="text/javascript" src="<?php echo $tpath ?>/js/vendor/jquery-1.11.3.min.js">\x3C/script>')</script>
   </head>
 
   <!-- Set page class -->
