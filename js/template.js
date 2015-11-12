@@ -19,10 +19,10 @@ var tablet = function(){
 // Prevent loading of images marked as mobile or desktop only
 function responsiveImgCheck() {
   jQuery('img[data-src]').each(function(){
-    if((mobile() && $(this).hasClass('mobile-only')) ||
-    (!mobile() && $(this).hasClass('desktop-only'))){
-      var src = $(this).data('src');
-      $(this).prop('src', src);
+    if((mobile() && jQuery(this).hasClass('mobile-only')) ||
+    (!mobile() && jQuery(this).hasClass('desktop-only'))){
+      var src = jQuery(this).data('src');
+      jQuery(this).prop('src', src);
     }
   });
 }
