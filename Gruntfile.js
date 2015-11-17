@@ -77,7 +77,7 @@ module.exports = function(grunt) {
         auth: {
           host: ftpServer,
           port: 21,
-          authKey: 'allebach'
+          authKey: 'credentials'
         },
         src: localDir,
         dest: ftpDir,
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
         auth: {
           host: ftpServer,
           port: 21,
-          authKey: 'allebach'
+          authKey: 'credentials'
         },
         src: localDir,
         dest: ftpDir,
