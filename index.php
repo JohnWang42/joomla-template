@@ -4,7 +4,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 // variables
 $app = JFactory::getApplication();
 $doc = JFactory::getDocument();
-unset($doc->_scripts[JURI::root(true) . '/media/jui/js/bootstrap.min.js']);
 $menu = $app->getMenu();
 $active = $app->getMenu()->getActive();
 $params = $app->getParams();
@@ -21,6 +20,10 @@ if($id != ""){
   $category = "";
 }
 
+//remove extraneuos scripts
+$this->_scripts = array();
+unset($this->_script['text/javascript']);
+
 
 ?>
 
@@ -30,14 +33,12 @@ if($id != ""){
     <jdoc:include type="head" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Media Query fix for older browsers -->
-    <script type="text/javascript" src="<?php echo $tpath ?>/js/vendor/respond.min.js"></script>
+    <script type="text/javascript" src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script type="text/javascript">window.respond || document.write('<script type="text/javascript" src="<?php echo $tpath ?>/js/vendor/respond.min.js">\x3C/script>')</script>
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo $tpath ?>/css/vendor/bootstrap.min.css" type="text/css" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo $tpath ?>/css/template.css" type="text/css" />
-    <!-- jQuery -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script type="text/javascript" src="<?php echo $tpath ?>/js/vendor/jquery-1.11.3.min.js">\x3C/script>')</script>
+    <link rel="stylesheet" href="<?php echo $tpath ?>/css/template.min.css" type="text/css" />
   </head>
 
   <!-- Set page class -->
@@ -48,5 +49,8 @@ if($id != ""){
   </body>
 
   <!-- JS -->
-  <script type="text/javascript" src="<?php echo $tpath ?>/js/template.js"></script>
+  <script type="text/javascript" src="//oss.maxcdn.com/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="<?php echo $tpath ?>/js/vendor/jquery-1.11.3.min.js">\x3C/script>')</script>
+  <script async type="text/javascript" src="<?php echo $tpath ?>/js/vendor/blazy.min.js"></script>
+  <script async type="text/javascript" src="<?php echo $tpath ?>/js/template.min.js"></script>
 </html>
