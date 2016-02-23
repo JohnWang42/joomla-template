@@ -24,6 +24,16 @@ if($id != ""){
 $this->_scripts = array();
 unset($this->_script['text/javascript']);
 
+//template js
+$doc->addScript($tpath.'/js/vendor/respond.min.js');
+$doc->addScript($tpath.'/js/vendor/jq-1.11.3.min.js');
+$doc->addScript($tpath.'/js/vendor/blazy.min.js');
+$doc->addScript($tpath.'/js/template.min.js');
+
+//template css
+$doc->addStyleSheet('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+$doc->addStyleSheet($tpath.'/css/vendor/bootstrap.min.css');
+$doc->addStyleSheet($tpath.'/css/template.min.css');
 
 ?>
 
@@ -32,13 +42,6 @@ unset($this->_script['text/javascript']);
   <head>
     <jdoc:include type="head" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Media Query fix for older browsers -->
-    <script type="text/javascript" src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <script type="text/javascript">window.respond || document.write('<script type="text/javascript" src="<?php echo $tpath ?>/js/vendor/respond.min.js">\x3C/script>')</script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo $tpath ?>/css/vendor/bootstrap.min.css" type="text/css" />
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo $tpath ?>/css/template.min.css" type="text/css" />
   </head>
 
   <!-- Set page class -->
@@ -47,10 +50,4 @@ unset($this->_script['text/javascript']);
     <jdoc:include type="component" />
     <jdoc:include type="modules" name="footer" />
   </body>
-
-  <!-- JS -->
-  <script type="text/javascript" src="//oss.maxcdn.com/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="<?php echo $tpath ?>/js/vendor/jquery-1.11.3.min.js">\x3C/script>')</script>
-  <script async type="text/javascript" src="<?php echo $tpath ?>/js/vendor/blazy.min.js"></script>
-  <script async type="text/javascript" src="<?php echo $tpath ?>/js/template.min.js"></script>
 </html>
