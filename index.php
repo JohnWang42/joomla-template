@@ -13,7 +13,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 //Get category name if it exists
 $db = JFactory::getDBO();
 $id = JRequest::getString('id');
-if($id != ""){
+if($id != "" && is_numeric($id)){
   $db->setQuery('SELECT #__categories.title FROM #__content, #__categories WHERE #__content.catid = #__categories.id AND #__content.id = '.$id);
   $category = $db->loadResult();
 } else {
