@@ -14,7 +14,7 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $db = JFactory::getDBO();
 $id = JRequest::getString('id');
 if($id != "" && is_numeric($id)){
-  $db->setQuery('SELECT #__categories.title FROM #__content, #__categories WHERE #__content.catid = #__categories.id AND #__content.id = '.$id);
+  $db->setQuery('SELECT #__categories.alias FROM #__content, #__categories WHERE #__content.catid = #__categories.id AND #__content.id = '.$id);
   $category = $db->loadResult();
 } else {
   $category = "";
@@ -45,7 +45,7 @@ $doc->addStyleSheet($tpath.'/css/template.min.css');
   </head>
 
   <!-- Set page class -->
-  <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?>">
+  <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass.' '.$category; ?>">
     <jdoc:include type="modules" name="main-navigation" />
     <jdoc:include type="component" />
     <jdoc:include type="modules" name="footer" />
