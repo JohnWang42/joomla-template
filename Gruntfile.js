@@ -112,6 +112,7 @@ module.exports = function(grunt) {
   });
   grunt.registerTask('default', ['prompt', 'if:default']);
   grunt.registerTask('init', ['prompt', 'if:init']);
+  grunt.registerTask('min', ['uglify', 'cssmin']);
 
   grunt.loadNpmTasks('grunt-prompt');
   grunt.loadNpmTasks('grunt-if');
