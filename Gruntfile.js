@@ -2,6 +2,7 @@
   Commands:
   default - refreshes non vendor files
   init - uploads everything including vendor files
+  min - minify CSS and JS files
   Refresh doesn't upload vendor JS and CSS files to save time, also skips images
 */
 module.exports = function(grunt) {
