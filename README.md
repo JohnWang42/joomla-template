@@ -42,7 +42,7 @@ Two tasks are availible for use:
 
 * `grunt init` will upload everything.
 
-* `grunt min` just minifies all js and css files in their respective directories
+* `grunt min` Compiles Sass files, minifies all js and css files in their respective directories
 
 ### Responsive Image Loading ###
 `<img>` tags that are desktop or mobile specific can be loaded responsively using the `data-src` attribute in place of the `src` attribute. Use the classes `mobile-only` or `desktop-only` to specify when this should show up. This helps to ease the total size of the page load.

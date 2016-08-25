@@ -1,0 +1,21 @@
+$mobile: 768px;
+$tablet: 1024px;
+
+.mobile-only {
+	display: none;
+	@media screen and (max-width: $mobile) {
+		display: block;
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.desktop-only {
+		display: none;
+	}
+}
+
+body {
+	// Font weight fix for macs
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

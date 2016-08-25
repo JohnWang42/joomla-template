@@ -48,6 +48,20 @@ module.exports = function(grunt) {
         ifTrue: [ 'uglify', 'cssmin', 'ftp-deploy:init' ]
       }
     },
+    sass: {                              // Task
+      dist: {                            // Target
+        options: {                       // Target options
+          style: 'expanded'
+        },
+        files: [{
+          expand: true,
+          cwd: 'css',
+          src: ['*.scss'],
+          dest: 'css',
+          ext: '.css'
+        }]
+      }
+    },
     'uglify': {
       options: {
         sourceMap: true
@@ -113,10 +127,11 @@ module.exports = function(grunt) {
   });
   grunt.registerTask('default', ['prompt', 'if:default']);
   grunt.registerTask('init', ['prompt', 'if:init']);
-  grunt.registerTask('min', ['uglify', 'cssmin']);
+  grunt.registerTask('min', ['sass', 'uglify', 'cssmin']);
 
   grunt.loadNpmTasks('grunt-prompt');
   grunt.loadNpmTasks('grunt-if');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-ftp-deploy');
