@@ -31,9 +31,8 @@ $doc->addScript($tpath.'/js/vendor/blazy.min.js');
 $doc->addScript($tpath.'/js/template.min.js');
 
 //template css
-$doc->addStyleSheet('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
-$doc->addStyleSheet($tpath.'/css/vendor/bootstrap.min.css');
-$doc->addStyleSheet($tpath.'/css/template.min.css');
+$doc->addStyleSheet($tpath.'/css/vendor/font-awesome.min.css');
+$doc->addStyleSheet($tpath.'/css/template.css');
 
 ?>
 
