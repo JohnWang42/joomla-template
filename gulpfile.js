@@ -17,7 +17,7 @@ gulp.task('js', function(){
 });
  
 gulp.task('sass:watch', function(){
-	gulp.watch('./css/scss/style.scss', ['sass']);
+	gulp.watch('./css/scss/template.scss', ['sass']);
 });
 
 gulp.task('js:watch', function(){
@@ -25,6 +25,6 @@ gulp.task('js:watch', function(){
 });
 
 gulp.task('tasks:watch', function(){
-    gulp.watch('./css/scss/style.scss', ['sass']);
+    gulp.watch('./css/scss/template.scss', ['sass']);
     gulp.watch('./js/src/template.js', ['js']);
 });
