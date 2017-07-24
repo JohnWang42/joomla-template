@@ -28,7 +28,7 @@ unset($this->_script['text/javascript']);
 $doc->addScript($tpath.'/js/vendor/respond.min.js');
 $doc->addScript($tpath.'/js/vendor/jq-1.11.3.min.js');
 $doc->addScript($tpath.'/js/vendor/blazy.min.js');
-$doc->addScript($tpath.'/js/template.min.js');
+$doc->addScript($tpath.'/js/template.js');
 
 //template css
 $doc->addStyleSheet($tpath.'/css/vendor/font-awesome.min.css');
